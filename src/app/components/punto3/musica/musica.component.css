@@ -1,0 +1,197 @@
+p{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  background-color: #a7b3f5;
+  margin-bottom: 0;
+}
+
+.nav-item img {
+  height: 1em;
+  width: 1em;
+}
+
+.nav-item img:hover {
+  height: 1.1em;
+  width: 1.1em;
+
+}
+@media (max-width: 1000px) {
+  .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-item div {
+    flex-direction: column;
+  }
+}
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-body {
+  position:relative;
+  min-height: 200px;
+  margin-bottom: 2px;
+}
+.card-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-primary{
+  background-color: red;
+  border-color: white;
+}
+.btn-primary:hover {
+  color: red;
+  border-color: #ff0000;
+  background-color: white;
+}
+.card {
+  margin-top: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(0.9);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.card-publicidad {
+  position: sticky;
+  margin-top: 5px;
+  top: 0;
+  width: 100%;
+}
+.bandera {
+  width: 20px;
+  height: auto;
+}
+.primera-columna{
+  width: 10rem;
+}
+.titulo-tabla{
+  margin-top: 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #0a53be;
+}
+.formulario{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #026e49;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  width: auto;
+}
+
+.titulo-formulario{
+  margin-top: 5px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #05c787;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+.subtitulo-formulario{
+  padding-top: 5px;
+  padding-left: 5px ;
+  align-items: start;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  background-color: #026e49;
+  text-align: left;
+}
+
+.form-select{
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.form-select{
+  width:100%;
+}
+
+.input-group{
+  padding-left: 5px;
+  width:101%;
+}
+.btn-convertir{
+  width: 100%;
+  background-color: #ff0000;
+  border-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  margin-top: 5px;
+}
+.footer-general{
+  font-weight: bold;
+  color: #cccccc;
+  background-color: #856db0;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.imagen-signo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 173, 0.17);
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 45px;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.imagen-signo:hover{
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0.9);
+}
+.imagen-signo img{
+  padding: 25px;
+  width: 75%;
+  height: 100%;
+}
+.boton-signo{
+  margin-bottom: 10px;
+  height: 80%;
+}
+.boton-signo:hover{
+  transition: transform 0.5s ease-in-out;
+}
+.imagen-signo-card img{
+  padding: 10px;
+  width: 50%;
+  height: auto;
+}
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0a53be;
+}

@@ -1,0 +1,12 @@
+.footer-color{
+  background-color: #b68f40;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.15s;
+  border-radius: 0 !important;
+}

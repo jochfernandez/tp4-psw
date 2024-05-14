@@ -1,0 +1,52 @@
+<div class="container-fluid fondo-formulario overflow-auto ">
+  <div class="row">
+    <div class="col-lg-3 col-md-2"></div>
+    <div class="form-1 col-lg-6 col-md-8 mt-2 mb-2 d-flex justify-content-center w-100">
+      <form class="mt-4">
+        <h4 class="text-center mb-2">REGISTRO DE TICKET</h4>
+        <div class="form-group row mb-2">
+          <label for="dni" class="col-4 col-form-label text-start">DNI</label>
+          <div class="col-8">
+            <input type="text" id="dni" [(ngModel)]="ticket.dni" name="dni" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+          <label for="precioReal" class="col-4 col-form-label text-start">Precio Real</label>
+          <div class="col-8">
+            <input type="number" id="precioReal" [(ngModel)]="ticket.precioReal" name="precioReal" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+          <label for="tipoEspectador" class="col-4 col-form-label text-start">Espectador </label>
+          <div class="col-8">
+            <select id="tipoEspectador" [(ngModel)]="ticket.tipoEspectador" name="tipoEspectador" class="form-control" required>
+              <option value="l">Local</option>
+              <option value="e">Extranjero</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+          <label for="fechaCobro" class="col-4 col-form-label text-start">Se cobra el </label>
+          <div class="col-8">
+            <input type="date" id="fechaCobro" [(ngModel)]="ticket.fechaCobro" name="fechaCobro" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2" *ngIf="ticket.precioReal && ticket.tipoEspectador">
+          <label for="precioCobrado" class="col-4 col-form-label text-start">Paga </label>
+          <div class="col-8">
+            <p id="precioCobrado" class="form-control-plaintext"> {{ calcularPrecioCobrado() | currency }}</p>
+          </div>
+        </div>
+
+        <button type="submit" class="mt-2 mb-2 btn btn-primary" (click)="ticketService.agregarTicket(ticket)">Registrar</button>
+        <button type="submit" class="m-1 mt-2 mb-2 btn btn-primary" (click)="verTabla()">Ver Tabla</button>
+      </form>
+    </div>
+    <div class="col-lg-3 col-md-2"></div>
+  </div>
+</div>
+

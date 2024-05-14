@@ -1,0 +1,49 @@
+.fondo-juego{
+  background-image: url("../../../assets/fondos/4.jpg");
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+}
+.tarjeta-principal{
+  background-color: #f7c1bb;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.btn-play {
+  background-color: #7FC29B;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  transition-duration: 0.4s;
+  height: 100%;
+  width: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.btn-opciones{
+  background-color: #fffd98;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+  width: 100%;
+}
+

@@ -1,0 +1,15 @@
+.btn-buscar{
+  background-color: #65524D;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+
+.navbar-color{
+  background-color: #B5EF8A;
+  border: 1px solid #000000;
+}

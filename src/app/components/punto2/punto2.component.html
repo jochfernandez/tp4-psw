@@ -1,0 +1,68 @@
+<div class="container-fluid fondo-juego p-5 d-flex justify-content-center align-items-center">
+  <div class="container p-0 m-5 tarjeta-principal">
+    <div class="container d-flex flex-column justify-content-center align-items-center mb-3">
+      <h1 class="mt-4">CUENTAPALABRAS</h1>
+    </div>
+    @if (mostrarBotonJugar){
+      <div class="container-fluid w-100 h-75 d-flex flex-column justify-content-center align-items-center">
+        <button type="button btn-play" class="btn btn-play w-25 h-25 mb-5" (click)="precargar();cambiarMostrarBotonJugar()"><img src="assets/punto2-iconos/play.svg"></button>
+      </div>
+    }@else{
+      @if (mostrarMenuOpciones){
+        <div class="container d-flex flex-column justify-content-center align-items-center pb-2">
+          <h2>Selecciona las opciones que deseas jugar</h2>
+          <div class="row w-75">
+            <button type="button" class="btn btn-primary col m-1" (click)=" elegirOpcion(1); cambiarMostrarMenuOpciones()">Letras</button>
+            <button type="button" class="btn btn-primary col m-1" (click)=" elegirOpcion(2); cambiarMostrarMenuOpciones()">Silabas</button>
+            <div class="w-100"></div>
+            <button type="button" class="btn btn-primary col m-1" (click)=" elegirOpcion(3); cambiarMostrarMenuOpciones()">Consonantes</button>
+            <button type="button" class="btn btn-primary col m-1" (click)=" elegirOpcion(4); cambiarMostrarMenuOpciones()">Vocales</button>
+          </div>
+        </div>
+      } @else {
+        @if(mostrarJuego){
+          <div  class="container d-flex flex-column justify-content-center align-items-center p-2 text-center">
+            <h2>¿Cuantas {{obtenerTipoSegunOpcion(opcionUsuario)}} tiene la palabra {{palabraSeleccionada ? palabraSeleccionada.palabra : undefined}}?</h2>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-3" *ngFor="let valor of Array.from(valoresPosibles)">
+                <button id="opcionSeleccionada" class="btn btn-primary btn-lg btn-block btn-opciones" (click)="comprobarRespuesta(valor,palabraSeleccionada)">{{valor}}</button>
+              </div>
+            </div>
+          </div>
+        }
+      }
+    }
+    @if (mostrarModal()){
+      <div id="modal" style="display: block;" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="gameOverModalLabel">¡Felicidades! Has completado el juego</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Cantidad de Palabras Acertadas {{contarPalabrasAcertadas()}}</p>
+              <p>Cantidad de Palabras Erradas {{contarPalabrasErradas()}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="reiniciar()">Reiniciar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

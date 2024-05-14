@@ -1,0 +1,45 @@
+.fondo-principal{
+    background-image: url('../../../assets/fondos/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000000;
+    text-align: center;
+}
+.custom-btn {
+  height: 100%;
+  width: auto;
+  margin-bottom: 5px;
+  border-radius: 100%;
+}
+/* Espacio entre la palabra y la imagen */
+.btn-success p {
+  margin-right: 20px;
+}
+.btn-1 {
+  background-color: #a09be7;
+}
+
+.btn-2 {
+  background-color: #b0ff92;
+}
+
+.btn-3 {
+  background-color: #d6ff79;
+}
+
+.btn-4 {
+  background-color: #fff2f1;
+}
+
+.container-fluid {
+  overflow: auto;
+}

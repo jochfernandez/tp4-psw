@@ -1,0 +1,85 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-md-block col-md-8">
+      <p class="titulo-tabla text-center">Conversor de Divisas Tabla</p>
+      <table class="table table-striped text-center">
+        <thead>
+        <tr>
+          <th scope="col"> </th>
+          <th scope="col">
+            ARS
+            <br>
+            <img src="assets/punto3-banderas/argentina.png" alt="Argentina" class="bandera">
+          </th>
+          <th scope="col">
+            USD
+            <br>
+            <img src="assets/punto3-banderas/estados-unidos.png" alt="Estados Unidos" class="bandera">
+          </th>
+          <th scope="col">
+            JPY
+            <br>
+            <img src="assets/punto3-banderas/japon.png" alt="Japon" class="bandera">
+          </th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        <tr>
+          <th scope="row" class="primera-columna">
+            <img src="assets/punto3-banderas/argentina.png" alt="Argentina" class="bandera">
+            1 ARS Inverse
+          </th>
+          <td>1.00</td>
+          <td>960.00</td>
+          <td>500.00</td>
+        </tr>
+        <tr>
+          <th scope="row" class="primera-columna">
+            <img src="assets/punto3-banderas/estados-unidos.png" alt="Estados Unidos" class="bandera">
+            1 USD Inverse
+          </th>
+          <td>850.00</td>
+          <td>1.00</td>
+          <td>5.00</td>
+        </tr>
+        <tr>
+          <th scope="row" class="primera-columna">
+            <img src="assets/punto3-banderas/japon.png" alt="Japon" class="bandera">
+            1 JPY Inverse
+          </th>
+          <td>5.00</td>
+          <td>2.00</td>
+          <td>1.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <p class="titulo-formulario text-center">Conversor de Divisas Formulario</p>
+      <div class="formulario">
+        <h4 class="subtitulo-formulario">Cantidad</h4>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">$</span>
+          <input type="text" class="form-control" placeholder="Cantidad">
+        </div>
+        <h4 class="subtitulo-formulario">De</h4>
+        <select class="form-select" >
+          <option selected value="USD">USD Dólares EEUU</option>
+          <option value="ARS">ARS Pesos ARG</option>
+          <option value="JPY">JPY Yen JPN</option>
+        </select>
+        <h4 class="subtitulo-formulario">A</h4>
+        <select class="form-select" >
+          <option selected value="USD">USD Dólares EEUU</option>
+          <option value="ARS">ARS Pesos ARG</option>
+          <option value="JPY">JPY Yen JPN</option>
+        </select>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="">$</span>
+          <input type="text" class="form-control" placeholder="Total" disabled>
+        </div>
+        <button type="button" class="btn btn-convertir w-100">Convertir</button>
+      </div>
+    </div>
+  </div>
+</div>
