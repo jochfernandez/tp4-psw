@@ -29,15 +29,15 @@ export class Punto2Component {
   }
   precargar() {
     this.palabras.push(new Palabra("Perezoso"));
-    this.palabras.push(new Palabra("Amaca"));
-    this.palabras.push(new Palabra("Gato"));
+    this.palabras.push(new Palabra("AMACA"));
+    this.palabras.push(new Palabra("GATO"));
     this.palabras.push(new Palabra("Perro"));
     this.palabras.push(new Palabra("Casa"));
     this.palabras.push(new Palabra("Motocicleta"));
     this.palabras.push(new Palabra("Frutilla"));
-    this.palabras.push(new Palabra("Pera"));
+    this.palabras.push(new Palabra("PERA"));
     this.palabras.push(new Palabra("Manzana"));
-    this.palabras.push(new Palabra("Gorra"));
+    this.palabras.push(new Palabra("GorraSelectiva"));
   }
   elegirOpcion(opcion: number) {
     console.log("Las palabras del arreglo son "+this.mostrarPalabras());
@@ -59,6 +59,9 @@ export class Punto2Component {
         break;
       case 4:
         this.valoresPosibles.add(palabra.vocales);
+        break;
+      case 5:
+        this.valoresPosibles.add(palabra.letrasMayusculas);
         break;
     }
     this.completarOpciones(this.valoresPosibles);
@@ -91,12 +94,10 @@ export class Punto2Component {
   }
   private mezclarOpciones(valoresPosibles: Set<number>) {
     let array = Array.from(valoresPosibles);
-    // Implementar el algoritmo de Fisher-Yates para mezclar el Array
     for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
-    // Convertir el Array mezclado de nuevo a un Set
     let setMezclado = new Set(array);
     return setMezclado;
   }
@@ -139,6 +140,8 @@ export class Punto2Component {
         return "Consonantes";
       case 4:
         return "Vocales";
+      case 5:
+        return "Mayusculas"
     }
     return "";
   }
@@ -161,7 +164,7 @@ export class Punto2Component {
     }
   }
   mostrarModal(){
-    if(this.palabrasMostradas === 8){
+    if(this.palabrasMostradas === 3){
       this.mostrarMenuOpciones = false;
       this.mostrarBotonJugar = true;
       return true;

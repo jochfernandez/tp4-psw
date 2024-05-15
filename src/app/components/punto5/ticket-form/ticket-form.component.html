@@ -42,8 +42,8 @@
           </div>
         </div>
 
-        <button type="submit" class="mt-2 mb-2 btn btn-primary" (click)="ticketService.agregarTicket(ticket)">Registrar</button>
-        <button type="submit" class="m-1 mt-2 mb-2 btn btn-primary" (click)="verTabla()">Ver Tabla</button>
+        <button type="submit" class="mt-2 mb-2 btn btn-primary" (click)="ticketService.agregarTicket(ticket); resetearTicket()">Registrar</button>
+        <button type="submit" class="m-1 mt-2 mb-2 btn btn-secondary" (click)="verTabla()">Ver Tabla</button>
       </form>
     </div>
     <div class="col-lg-3 col-md-2"></div>

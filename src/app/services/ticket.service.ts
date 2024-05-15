@@ -11,9 +11,12 @@ export class TicketService {
     return this.tickets;
   }
 
+
+
   agregarTicket(ticket:Ticket){
     console.log(ticket);
     this.tickets.push(ticket);
+    window.alert("Ticket agregado exitosamente!");
     console.log("Tickets: "+ this.tickets.length);
   }
 

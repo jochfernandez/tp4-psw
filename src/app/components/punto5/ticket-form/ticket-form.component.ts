@@ -16,6 +16,7 @@ export class TicketFormComponent{
   ticket: Ticket = new Ticket();
   tickets: Array<Ticket> = [];
 
+
   constructor(protected ticketService: TicketService,  private router: Router) {
   }
   calcularPrecioCobrado(): number {
@@ -27,8 +28,12 @@ export class TicketFormComponent{
     return this.ticket.precioCobrado;
   }
   protected readonly TicketService = TicketService;
-
+  resetearTicket() {
+    this.ticket = new Ticket();
+  }
   verTabla() {
     this.router.navigate(['/punto5TicketList']);
   }
+
+
 }

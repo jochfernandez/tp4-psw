@@ -4,6 +4,7 @@ export class Palabra {
   private _vocales: number;
   private _consonantes: number;
   private _silabas: number;
+  private _letrasMayusculas: number;
 
   constructor(palabra: string) {
     this._palabra = palabra;
@@ -11,6 +12,7 @@ export class Palabra {
     this._vocales = this.calcularVocales();
     this._consonantes = this.calcularConsonantes();
     this._silabas = this.calcularSilabas();
+    this._letrasMayusculas = this.calcularMayusculas();
   }
 
 
@@ -54,6 +56,15 @@ export class Palabra {
     this._silabas = value;
   }
 
+
+  get letrasMayusculas(): number {
+    return this._letrasMayusculas;
+  }
+
+  set letrasMayusculas(value: number) {
+    this._letrasMayusculas = value;
+  }
+
   private calcularVocales() {
     let vocales = 0;
     for (let letra of this._palabra) {
@@ -83,5 +94,16 @@ export class Palabra {
       ultimaLetra = letra;
     }
     return silabas;
+  }
+  private calcularMayusculas(){
+    let mayusculas =0;
+    for (let letra of this._palabra) {
+      console.log(letra);
+      if(letra >='A' && letra<='Z'){
+        mayusculas++;
+      }
+    }
+    console.log("La palabra tiene "+mayusculas);
+    return mayusculas;
   }
 }
